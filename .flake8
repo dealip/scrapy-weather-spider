@@ -1,0 +1,29 @@
+[flake8]
+# 检查的文件扩展名
+filename = *.py
+
+# 排除的目录/文件（不需要检查的路径）
+exclude = 
+    .git,           # Git版本控制目录
+    __pycache__,    # Python缓存目录
+    .venv,          # 虚拟环境目录
+    venv,           # 虚拟环境目录
+    env,            # 虚拟环境目录
+    .env,           # 虚拟环境目录
+    migrations,     # Django数据库迁移目录
+    build,          # 构建目录
+    *.egg-info      # Python包信息目录
+
+# 最大行长度（超过此长度会报警告）
+max-line-length = 140
+
+# 忽略的规则（这些规则不会触发警告）
+ignore = 
+    E203, 
+    W503,   
+# 复杂度限制（循环复杂度，超过此值会报警）
+max-complexity = 15
+
+format = %(path)s:%(row)d:%(col)d:%(code)s:%(text)s
+
+min-version = 3.8.0
